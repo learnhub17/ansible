@@ -1,0 +1,13 @@
+#!/bin/bash
+echo " enter aws region"
+read $1
+echo " aws_key_ID"
+read $2
+echo " aws_secret_key "
+read $3
+dir=~/.aws
+mkdir $dir
+echo "[default]" > $dir/config
+echo "region = "$1" " >> $dir/config
+echo "output = json" >> $dir/config
+
